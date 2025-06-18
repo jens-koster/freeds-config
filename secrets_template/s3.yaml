@@ -1,0 +1,5 @@
+
+config:
+  access_key: <use the minio ui to create an access key>
+  secret_key: <that'll generate the secret key as well>
+  url: http://s3-minio:9900
