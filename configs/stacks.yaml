@@ -2,7 +2,7 @@ doc: The stack definitions for freeds cli. freeds will do some magic and then it
   these folders in order to run docker compose with the chosen command in each
 
 config:
-  spark-stack:
+  default:
     plugins:
     - freeds-config
     - s3-minio
@@ -11,18 +11,15 @@ config:
     - spark
     - redis
     - airflow
-  book-runner:
-    plugins:
-    - freeds-config
-    - s3-minio
-    - jupyter
-  spark-mini:
+
+  spark-only:
     plugins:
     - freeds-config
     - s3-minio
     - postgres
     - spark
-  airflow-mini:
+
+  airflow-only:
     plugins:
     - freeds-config
     - s3-minio
