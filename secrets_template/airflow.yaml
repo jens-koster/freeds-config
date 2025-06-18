@@ -3,5 +3,5 @@ doc: >
 
 config:
   user: airflow
-  password: airflow
+  password: jazzword
   url: http://airflow-webserver:8001
