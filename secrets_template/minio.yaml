@@ -1,5 +1,6 @@
 doc: >
-  This is a configuration file for spinning up the MinIO S3 server.
+  This is a configuration file is used when setting up the minio server.
+  You'll need these to log on to the admin console on http://s3-minio:9900 and create the access keys.
 
 config:
   user: minio
