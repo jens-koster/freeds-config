@@ -1,5 +1,8 @@
 
 config:
+  user: <use freeds-setup to set user name>
+  password: <use freeds-setup to set password>
+
   access_key: <use the minio ui to create an access key>
   secret_key: <which'll generate the secret key as well>
   url: http://s3-minio:9900
