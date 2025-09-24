@@ -1,7 +1,6 @@
 #
 #  note: most of the config only has effect in the self test.
 #  but, it's also how we reserve unique resources like ports, namespaces, schemas and container names for individual plugins.
-#  At some point there should be ui or notebook to inspect this information in a nice way.
 
 #   - name: spark
 #     description: "Spark cluster"
@@ -49,6 +48,20 @@ config:
       containers:
         - devpi
 
+    - name: freeds-config
+      description: "FREEDS config, the freeds config server"
+      ports:
+        - number: 8005
+          description: "FREEDS config web UI"
+      namespaces:
+        - name: swagger-ui
+          description: "Swagger UI for FREEDS config"
+        - name: redoc
+          description: "Redoc ui for FREEDS config"
+        - name: api/configs
+          description: "API endpoint for FREEDS configs"
+      containers:
+        - freeds-config
 
     - name: jupyter
       description: "Jupyter server to run spark notbooks and notebook runner container with papermill, intended for airflow dags."
@@ -110,18 +123,3 @@ config:
         - spark-master
         - spark-worker-1
         - spark-worker-2
-
-    - name: freeds-config
-      description: "FREEDS config, the freeds config server"
-      ports:
-        - number: 8005
-          description: "FREEDS config web UI"
-      namespaces:
-        - name: swagger-ui
-          description: "Swagger UI for FREEDS config"
-        - name: redoc
-          description: "Redoc ui for FREEDS config"
-        - name: api/configs
-          description: "API endpoint for FREEDS configs"
-      containers:
-        - freeds-config
