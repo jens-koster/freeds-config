@@ -6,6 +6,6 @@ config:
   temp_dir: /tmp/nbdeploy
   bucket: notebooks
   repos:
-    - name: pipe-dreams
+    - name: freeds-lab-databrickish
       directories:
         - notebooks
