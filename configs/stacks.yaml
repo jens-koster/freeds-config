@@ -13,6 +13,12 @@ config:
     - airflow
     - devpi
 
+  kafka-only:
+    plugins:
+    - freeds-config
+    - s3-minio
+    - kafka
+
   spark-only:
     plugins:
     - freeds-config
