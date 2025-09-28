@@ -80,6 +80,28 @@ config:
           description: "Minio S3 API - this port should be changed! vs code is sometimes using it"
       containers:
         - s3-minio
+    - name: kafka
+      description: "Kafka cluster in KRaft mode, 3 + 3 with kafdrop and akhq guis."
+      ports:
+        - number: 8015
+          description: "Kafdrop UI"
+        - number: 8016
+          description: "akhq UI"
+        - number: 29092
+          description: "Kafka broker 1 PLAINTEXT"
+        - number: 39092
+          description: "Kafka broker 2 PLAINTEXT"
+        - number: 49092
+          description: "Kafka broker 3 PLAINTEXT"
+      containers:
+        - kafka-con-1
+        - kafka-con-2
+        - kafka-con-3
+        - kafka-bro-1
+        - kafka-bro-2
+        - kafka-bro-3
+        - akhq
+        - kafdrop
 
     - name: postgres
       description: "PostgreSQL"
