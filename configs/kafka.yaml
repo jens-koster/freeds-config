@@ -1,0 +1,2 @@
+config:
+    bootstrap_servers: "kafka-bro-2:19092,kafka-brocon-3:19092,kafka-brocon-4:19092"
