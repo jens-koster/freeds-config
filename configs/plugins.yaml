@@ -78,6 +78,8 @@ config:
           description: "Kafdrop UI"
         - number: 8016
           description: "akhq UI"
+        - number: 8083
+          description: "Kafka Connect REST API"
         - number: 19092
           description: "Kafka broker + controller 2 PLAINTEXT"
         - number: 19093
@@ -89,6 +91,7 @@ config:
         - kafka-bro-2
         - kafka-brocon-3
         - kafka-brocon-4
+        - kafka-connect
         - akhq
         - kafdrop
 

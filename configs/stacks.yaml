@@ -17,6 +17,7 @@ config:
     plugins:
     - freeds-config
     - s3-minio
+    - postgres
     - kafka
 
   spark-only:
