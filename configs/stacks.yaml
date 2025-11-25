@@ -5,6 +5,7 @@ config:
   default:
     plugins:
     - freeds-config
+    - vault
     - s3-minio
     - postgres
     - jupyter
@@ -12,6 +13,13 @@ config:
     - redis
     - airflow
     - devpi
+
+  jafkafe:
+    plugins:
+    - freeds-config
+    - vault
+    - postgres
+    - kafka
 
   kafka-only:
     plugins:
